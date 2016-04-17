@@ -1,3 +1,200 @@
 <template name="inicio">
-
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse0">
+            Paso 0: Antes de Empezar. (Un poquillo de Teoría).
+          </a>
+        </h4>
+      </div>
+      <div id="collapse0" class="panel-collapse collapse">
+        <div class="panel-body">
+          <ul>
+            <li>Deberías tener nociones de <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong>. Y también saber algo de <strong>Bootstrap</strong>.</li>
+            <li>En Meteor:
+              <ul>
+                <li><strong>JavaScript</strong> se usa tanto en el cliente como en el servidor.</li>
+                <li><strong>MongoDB</strong> es el Gestor de Bases de Datos que usaremos.</li>
+                <li><strong>MongoDB</strong> es una Base de Datos <strong>No Relacional</strong>.</li>
+                <li>En <strong>MongoDB</strong> los datos se ven en formato <strong>JSON</strong>.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+            Paso 1: Estructura de un Proyecto Meteor. (Un poquillo más de Teoría)
+          </a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body">
+          <img src="/tree.png" alt="tree"/><br/><br/>
+          <ul>
+            <li>Lo que hay en <strong>/client</strong> se ejecuta sólo en el cliente.</li>
+            <li>Lo que hay en <strong>/public</strong> está disponible directamente desde la web.</li>
+            <li>Lo que hay en <strong>/lib</strong> se ejecuta tanto en cliente como en servidor.</li>
+            <li>Lo que hay en <strong>/server</strong> se ejecuta sólo en el servidor.</li>
+            <li>Se han comentado la mayoría de los ficheros. Veamos lo que queda sin comentar:
+              <ul>
+                <li><strong>main.html</strong></li>
+                <li><strong>router.js</strong></li>
+                <li><strong>Una parte de layout.html</strong></li>
+                <li><strong>inicio.html</strong></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+            Paso 2: Las Plantillas.
+          </a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+          <ul>
+            <li>En Meteor se trabaja con <strong>plantillas (templates)</strong>.</li>
+            <li>Las <strong>plantillas</strong> se usan para definir las diferentes partes de una página.</li>
+            <li>En nuestro ejemplo en realidad tenemos una sóla página. Las diferentes partes (plantillas) se cargan o no según el caso.</li>
+            <li><strong>Empezamos a trabajar activamente</strong>. Quita los comentarios de las siguientes páginas:
+              <ul>
+                <li><strong>layout.html</strong></li>
+                <li><strong>cabecera.html</strong></li>
+                <li><strong>lo_que_va_en_un_lado.html</strong></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+          Paso 3: ¿Has comprendido las plantillas en el paso 2 anterior?</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">
+          <ul>
+            <li>Cada <strong>plantilla (template)</strong> se declara con un elemento <code>&lt;template name="nombreDePlantilla"&gt;</code>.</li>
+            <li>Una <strong>plantilla</strong> se despliega(usa) con <code>&lbrace;&lbrace;&gt;nombreDePlantilla}}</code>.</li>
+            <li>Hay <strong>plantillas</strong> que se pueden desplegar al instalar una librería concreta. ¿Qué crees que hace <code>&lbrace;&lbrace;&gt;loginButtons}}</code>?</li>
+            <li>Las librerías en Meteor están en un repositorio propio. Por ejemplo la plantilla anterior para el login la puedes usar porque previamente en el proyecto se había instalado <strong>meteor add accounts-password</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+          Paso 4: Los eventos.</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <div class="panel-body">
+          <ul>
+            <li>Cada <strong>plantilla (template)</strong> tiene código HTML.</li>
+            <li>A cada elemento HTML de una <strong>plantilla</strong> se le pueden asociar <strong>Eventos</strong>.</li>
+            <li>Descomenta el código de <strong>cambiar_fondo.js</strong>.</li>
+            <li>¿Funciona ahora el cambio de fondo?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+          Paso 5: ¿Por qué no te aparece aún la caja de texto en la cabecera para enviar mensajes?</a>
+        </h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse">
+        <div class="panel-body">
+          <ul>
+            <li>Por supuesto ahí tienes que descomentar el archivo con la plantilla que se encarga de ello:
+              <ul>
+                <li><strong>envio_de_mensajes.html</strong></li>
+              </ul>
+            </li>
+            <li>Es importatnte que te des cuenta que en cabecera.html sólo se mostrará la caja de texto para enviar mensajes cuando el usuario está autentificado.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+          Paso 6: Los mensajes no funcionan. ¿Por qué?</a>
+        </h4>
+      </div>
+      <div id="collapse6" class="panel-collapse collapse">
+        <div class="panel-body">
+          <ul>
+            <li>Por supuesto hay que descomentar los siguientes archivos:
+              <ul>
+                <li><strong>mensajes.html</strong></li>
+                <li><strong>mensaje.html</strong></li>
+                <li><strong>mensajes.js</strong></li>
+              </ul>
+            </li>
+            <li>Y no olvides el fichero <code>/lib/collections/mensajes.js</code> que define la Base de Datos.</li>
+            <li>Ten en cuenta que Meteor guarda una versión de la BD en el cliente y otra en el servidor.</li>
+            <li>Las dos copias de la BD se sincronizan de forma transparente para el programador.</li>
+            <li>Además debes descomentar la ruta correspondiente a <code>/mensajes</code> en el fichero <code>/lib/router.js</code>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+          Paso 7: ¿Por qué aún no funciona el envío de mensajes?</a>
+        </h4>
+      </div>
+      <div id="collapse7" class="panel-collapse collapse">
+        <div class="panel-body">
+          <ul>
+            <li>Efectivamente debes descomentar el fichero <code>envio_de_mensajes.js</code></li>
+            <li>En ese fichero es dónde se realiza la inserción en la BD cuando el usuario envía un mensaje.</li>
+            <li>Como ya te dije en el punto anterior ten en cuenta que Meteor guarda una versión de la BD en el cliente y otra en el servidor.</li>
+            <li>Las dos copias de la BD se sincronizan de forma transparente para el programador.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">
+          Paso 8: Ver los mensajes en MongoDB</a>
+        </h4>
+      </div>
+      <div id="collapse8" class="panel-collapse collapse">
+        <div class="panel-body">
+          <ul>
+            <li>Lo puedes hacer de dos maneras:
+              <ul>
+                <li>Desde la línea de comandos en el servidor con <code>meteor mongo</code>.</li>
+                <li>Desde el navegador Web haciendo click en <strong>Inspeccionar</strong>.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

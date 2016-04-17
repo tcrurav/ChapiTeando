@@ -1,3 +1,4 @@
+/* No descomentar hasta el paso 4 */
 Template.cabecera.events({
   'click #ladrillos': function(){
     $("body").css("background-image","url(/ladrillos.jpg)");

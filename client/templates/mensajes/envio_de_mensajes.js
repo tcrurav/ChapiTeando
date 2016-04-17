@@ -1,3 +1,4 @@
+/* No descomentar hasta el paso 7 */
 Template.envioDeMensajes.events({
   'submit #enviarMensaje': function(event){
     var f = new Date();
@@ -9,6 +10,7 @@ Template.envioDeMensajes.events({
       fecha: f,
       fechaFormateada: fechaFormateada
     });
+    event.target.textoMensaje.value="";
     return false;
   }
 });
