@@ -1,4 +1,4 @@
-/* No descomentar hasta el paso 7 */
+/* No descomentar hasta el paso 7
 Template.envioDeMensajes.events({
   'submit #enviarMensaje': function(event){
     var f = new Date();
@@ -32,3 +32,4 @@ function checkTime(i) {
     }
     return i;
 }
+*/

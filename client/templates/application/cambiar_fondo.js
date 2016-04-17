@@ -1,4 +1,4 @@
-/* No descomentar hasta el paso 4 */
+/* No descomentar hasta el paso 4
 Template.cabecera.events({
   'click #ladrillos': function(){
     $("body").css("background-image","url(/ladrillos.jpg)");
@@ -16,3 +16,4 @@ Template.cabecera.events({
     $("body").css("background-image","url(/chino.png)");
   }
 });
+*/
